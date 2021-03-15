@@ -1,2 +1,2 @@
 # rainydays
-Online shop that sells jackets
+Online shop that sells comfortable and durable jackets for all types of weather and seasons!
