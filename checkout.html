@@ -42,8 +42,11 @@
             <div id="logo-bar">
                 <div>
                     <a href="index.html" class="logo"><img src="/images/Rainydays_logo.png" alt="Logo Rainydays" /></a>
-                    <div class="cart-area">
-                        <a href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i>1</a>
+                    <div class="cart-btn">
+                        <button type="button" id="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count-info">1</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -59,104 +62,78 @@
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </nav>
-            <div class="orangebar">
-                <div class="search">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search" />
-                        <button class="search-button" type="submit">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
+            <div class="orangebar"></div>
         </header>
         <main>
             <div class="herobar"><h1>Checkout</h1></div>
-            <div class="row">
-                <div class="col-75">
-                    <div class="container-details">
-                        <form action="/action_page.php">
-                            <div class="row">
-                                <div class="col-50">
-                                    <h3>Billing Address</h3>
-                                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                                    <input type="text" id="fname" name="firstname" placeholder="John M. Doe" />
-                                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                                    <input type="text" id="email" name="email" placeholder="john@example.com" />
-                                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                                    <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" />
-                                    <label for="city"><i class="fa fa-institution"></i> City</label>
-                                    <input type="text" id="city" name="city" placeholder="New York" />
-
-                                    <div class="row">
-                                        <div class="col-50">
-                                            <label for="state">State</label>
-                                            <input type="text" id="state" name="state" placeholder="NY" />
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="zip">Zip</label>
-                                            <input type="text" id="zip" name="zip" placeholder="10001" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-50">
-                                    <h3>Payment</h3>
-                                    <label for="fname">Accepted Cards</label>
-                                    <div class="icon-container">
-                                        <i class="fa fa-cc-visa" style="color: navy"></i>
-                                        <i class="fa fa-cc-amex" style="color: blue"></i>
-                                        <i class="fa fa-cc-mastercard" style="color: red"></i>
-                                        <i class="fa fa-cc-discover" style="color: orange"></i>
-                                    </div>
-                                    <label for="cname">Name on Card</label>
-                                    <input type="text" id="cname" name="cardname" placeholder="John More Doe" />
-                                    <label for="ccnum">Credit card number</label>
-                                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" />
-                                    <label for="expmonth">Exp Month</label>
-                                    <input type="text" id="expmonth" name="expmonth" placeholder="September" />
-
-                                    <div class="row">
-                                        <div class="col-50">
-                                            <label for="expyear">Exp Year</label>
-                                            <input type="text" id="expyear" name="expyear" placeholder="2018" />
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="cvv">CVV</label>
-                                            <input type="text" id="cvv" name="cvv" placeholder="352" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <section class="form_section">
+                <div class="container-form">
+                    <form id="checkoutForm">
+                        <h2>Checkout</h2>
+                        <div>
                             <label>
-                                <input type="checkbox" checked="checked" name="sameadr" />
-                                Shipping address same as billing
+                                <!-- First name -->
+                                <input name="fullName" id="fullName" required placeholder="Full Name" />
                             </label>
-                            <input type="submit" value="Purchase" formaction="checkout-success.html" class="btn" />
-                        </form>
-                    </div>
+                            <div class="form-error" id="fullNameError">minimum 2 characters</div>
+                        </div>
+
+                        <!-- <div>
+                            <label>
+                                
+                                <input name="lastName" id="lastName" required placeholder="First Name" />
+                            </label>
+                            <div class="form-error" id="lastNameError">minimum 2 characters</div>
+                        </div> -->
+
+                        <div>
+                            <label>
+                                <!-- Email -->
+                                <input name="email" id="email" required placeholder="Email" />
+                            </label>
+                            <div class="form-error" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        <div>
+                            <label>
+                                <!-- Email -->
+                                <input name="address" id="address" required placeholder="Address" />
+                            </label>
+                            <div class="form-error" id="addressError">Please enter your address minimum 10 characters</div>
+                        </div>
+                        <div>
+                            <label>
+                                <!-- Email -->
+                                <input name="ccnumber" id="ccnumber" required placeholder="0000111122223333" />
+                            </label>
+                            <div class="form-error" id="ccnumberError">Please enter your credit card number</div>
+                        </div>
+                        <div>
+                            <label>
+                                <!-- Email -->
+                                <input name="cardholder" id="cardholder" required placeholder="Card Holder" />
+                            </label>
+                            <div class="form-error" id="cardholderError">Please enter cardholder name</div>
+                        </div>
+                        <div class="date-cvc">
+                            <div>
+                                <label>
+                                    <!-- Email -->
+                                    <input name="date" id="date" required placeholder="0121" />
+                                </label>
+                                <div class="form-error" id="dateError">Please enter expiry date</div>
+                            </div>
+                            <div>
+                                <label>
+                                    <!-- Email -->
+                                    <input name="cvccode" id="cvccode" required placeholder="123" />
+                                </label>
+                                <div class="form-error" id="cvcCodeError">Please enter CVC</div>
+                            </div>
+                        </div>
+                        <button class="btn-checkout-form">Purchase</button>
+                    </form>
                 </div>
-                <div class="col-25">
-                    <div class="container">
-                        <h4>
-                            Cart
-                            <span class="price" style="color: black">
-                                <i class="fa fa-shopping-cart"></i>
-                                <b>1</b>
-                            </span>
-                        </h4>
-                        <p>
-                            <a href="jacket.html">All Weather Jacket</a>
-                            <span class="price">$129</span>
-                        </p>
-                        <p>Shipping<span class="price">FREE</span></p>
-                        <hr />
-                        <p>
-                            Total <span class="price" style="color: black"><b>$129</b></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            </section>
             <div class="social-info">
                 <h2>Follow us on</h2>
                 <a href="https://www.instagram.com"><i class="fab fa-instagram-square fa-5x"></i></a>
@@ -173,7 +150,26 @@
                     ><img src="/images/instagram_3.jpg" alt="Picture of a woman in a snowy forest wearing a Rainydays jacket"
                 /></a>
             </div>
+            <div class="overlay-container">
+                <div class="close-button">
+                    <button>X</button>
+                </div>
+                <ul class="cart-products">
+                    <li>Your Cart</li>
+                    <li><img src="images/Rainydays-Mens-All-Weather-Jacket.jpg" alt="Rainydays All Weather Jacket Men's" /></li>
+                    <ul class="cart-overlay-info">
+                        <li><i class="fas fa-minus-square"></i>1<i class="fas fa-plus-square"></i></li>
+                        <li>Rainydays</li>
+                        <li>All Weather Jacket</li>
+                        <li>Price: $129</li>
+                        <li class="cart-total-price">Total: $129</li>
+                    </ul>
+                    <button>Purchase</button>
+                </ul>
+            </div>
         </main>
         <footer id="footer"><i class="fa fa-copyright" aria-hidden="false"></i>Copyright Rainydays 2020</footer>
+        <script src="js/overlay.js"></script>
+        <script src="js/checkout.js"></script>
     </body>
 </html>

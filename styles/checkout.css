@@ -1,173 +1,109 @@
 .herobar {
-  background-image: url('/images/banner_contact_us.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 100%;
-  min-height: 150px;
+    background-image: url("/images/banner_contact_us.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    min-height: 100px;
 }
 
-label::after {
-  content: '';
-  display: block;
+.container-form {
+    border-radius: 5px;
+    padding: 20px;
 }
 
-.form__input {
-  display: flex;
-}
-
-.form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5rem;
-}
-
-.row {
-  max-width: 1200px;
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: auto;
-}
-
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-}
-
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container-details {
-  margin-top: 250px;
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-.container-details input[type='text'] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+.form_section h2 {
+    font-family: adobe-garamond-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #0a3641;
 }
 
 .container {
-  margin-top: 250px;
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  line-height: 2rem;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
-.container input[type='text'] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+#checkoutForm {
+    margin: 0 auto;
+    max-width: 670px;
+    padding: 0 2em;
+    background: white;
+    border-radius: 1rem;
+}
+
+.date-cvc {
+    display: flex;
+    max-width: 400px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.date-cvc:first-child {
+    margin-right: 10px;
+}
+
+input {
+    width: 100%;
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-checkout-form {
+    text-transform: uppercase;
+    background: rgb(11, 91, 133);
+    border: none;
+    width: 200px;
+    padding: 1rem;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 0.2rem;
 }
 
 label {
-  margin-bottom: 10px;
-  display: block;
+    display: block;
+    margin-top: 1rem;
 }
 
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
+.form-error {
+    color: gray;
+    font-size: 0.9rem;
+    margin-top: 2px;
 }
 
-.btn {
-  background-color: #4caf50;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
+#subject {
+    width: 100%;
+    font-size: 1rem;
+    font-family: sans-serif;
 }
 
-.btn:hover {
-  background-color: #45a049;
-}
-
-span.price {
-  float: right;
-  color: grey;
-}
-
-/* media queries herobar */
+/* media queries */
 
 @media screen and (max-width: 768px) {
-  .herobar {
-    background-image: url('/images/banner_contact_us_pad.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100%;
-    height: 150px;
-  }
+    .herobar {
+        background-image: url("/images/banner_contact_us_pad.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
+        height: 150px;
+    }
 }
 @media screen and (max-width: 414px) {
-  .herobar {
-    background-image: url('/images/banner_contact_us_mobile.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100%;
-    height: 150px;
-  }
-  .herobar h1 {
-    text-align: left;
-    vertical-align: middle;
-    line-height: 150px;
-    color: #0a3641;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-  }
-}
-
-/* media queries checkout */
-
-@media (max-width: 1090px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
-  .container-details {
-    margin-top: 20px;
-    background-color: #f2f2f2;
-    padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-  }
-
-  .container-details input[type='text'] {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
+    .herobar {
+        background-image: url("/images/banner_contact_us_mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
+        height: 150px;
+    }
+    .herobar h1 {
+        text-align: left;
+        vertical-align: middle;
+        line-height: 150px;
+        color: #0a3641;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
 }

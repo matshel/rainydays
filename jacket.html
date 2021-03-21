@@ -42,8 +42,11 @@
             <div id="logo-bar">
                 <div>
                     <a href="index.html" class="logo"><img src="/images/Rainydays_logo.png" alt="Logo Rainydays" /></a>
-                    <div class="cart-area">
-                        <a href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                    <div class="cart-btn">
+                        <button type="button" id="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count-info">0</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -59,16 +62,7 @@
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </nav>
-            <div class="orangebar">
-                <div class="search">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search" />
-                        <button class="search-button" type="submit">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
+            <div class="orangebar"></div>
         </header>
         <main>
             <div class="herobar"><h1>Jackets / Men's</h1></div>
@@ -95,13 +89,6 @@
                     <p class="title">Rainydays</p>
                     <p class="description">Men's All Weather Jacket</p>
                     <p class="price">$129</p>
-                    <section id="form">
-                        <h3>Select Quantity</h3>
-                        <form action="/action_page.php">
-                            <label for="qty"></label>
-                            <input type="text" id="qty" name="qty" value="1" />
-                        </form>
-                    </section>
                     <section id="select-size">
                         <h3>Select Size</h3>
                         <div class="radio-size">
@@ -143,7 +130,17 @@
                     ><img src="/images/instagram_3.jpg" alt="Picture of a woman in a snowy forest wearing a Rainydays jacket"
                 /></a>
             </div>
+            <div class="overlay-container">
+                <div class="close-button">
+                    <button>X</button>
+                </div>
+                <ul class="cart-products">
+                    <li>Your Cart</li>
+                    <li>Your cart is empty!</li>
+                </ul>
+            </div>
         </main>
         <footer id="footer"><i class="fa fa-copyright" aria-hidden="false"></i>Copyright Rainydays 2020</footer>
+        <script src="js/overlay.js"></script>
     </body>
 </html>

@@ -11,8 +11,10 @@
         <meta name="author" content="Mats Helgesen" />
         <script src="https://kit.fontawesome.com/6ffdc149cc.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://use.typekit.net/xtx6yne.css" />
-        <link rel="stylesheet" href="/styles/styles.css" />
+        <link rel="stylesheet" href="styles/overlay.css" />
         <link rel="stylesheet" type="text/css" href="/styles/all.css" />
+        <link rel="stylesheet" href="/styles/styles.css" />
+
         <title>Rainydays All Jackets</title>
         <!-- Hotjar Tracking Code for  -->
         <script>
@@ -42,8 +44,11 @@
             <div id="logo-bar">
                 <div>
                     <a href="index.html" class="logo"><img src="/images/Rainydays_logo.png" alt="Logo Rainydays" /></a>
-                    <div class="cart-area">
-                        <a href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                    <div class="cart-btn">
+                        <button type="button" id="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count-info">0</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -59,16 +64,7 @@
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </nav>
-            <div class="orangebar">
-                <div class="search">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search" />
-                        <button class="search-button" type="submit">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
+            <div class="orangebar"></div>
         </header>
         <main>
             <div class="herobar"><h1>Jackets / All</h1></div>
@@ -144,7 +140,17 @@
                     ><img src="/images/instagram_3.jpg" alt="Picture of a woman in a snowy forest wearing a Rainydays jacket"
                 /></a>
             </div>
+            <div class="overlay-container">
+                <div class="close-button">
+                    <button>X</button>
+                </div>
+                <ul class="nav-list">
+                    <li>Your Cart</li>
+                    <li>Your cart is empty!</li>
+                </ul>
+            </div>
         </main>
         <footer id="footer"><i class="fa fa-copyright" aria-hidden="false"></i>Copyright Rainydays 2020</footer>
+        <script src="js/overlay.js"></script>
     </body>
 </html>

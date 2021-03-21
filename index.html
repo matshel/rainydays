@@ -11,8 +11,9 @@
         <meta name="author" content="Mats Helgesen" />
         <script src="https://kit.fontawesome.com/6ffdc149cc.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://use.typekit.net/xtx6yne.css" />
-        <link rel="stylesheet" href="/styles/styles.css" />
-        <link rel="stylesheet" href="/styles/index.css" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <link rel="stylesheet" href="styles/index.css" />
+        <!-- <link rel="stylesheet" href="styles/overlay.css" /> -->
         <title>Rainydays Home</title>
         <!-- Hotjar Tracking Code for  -->
         <script>
@@ -36,14 +37,17 @@
             <div class="statementbar">
                 <p class="child1"><i class="fas fa-check-circle"></i>FREE returns</p>
                 <p class="child2"><i class="fas fa-check-circle"></i>FREE delivery on orders over $100</p>
-                <p class="child3"><i class="fas fa-check-circle"></i>45 day money back garantuee</p>
-                <p class="child4"><i class="fas fa-check-circle"></i>Satisfaction garantuee</p>
+                <p class="child3"><i class="fas fa-check-circle"></i>45 day money back guarantee</p>
+                <p class="child4"><i class="fas fa-check-circle"></i>Satisfaction guarantee</p>
             </div>
             <div id="logo-bar">
                 <div>
                     <a href="index.html" class="logo"><img src="/images/Rainydays_logo.png" alt="Logo Rainydays" /></a>
-                    <div class="cart-area">
-                        <a href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                    <div class="cart-btn">
+                        <button type="button" id="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count-info">0</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -59,16 +63,7 @@
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </nav>
-            <div class="orangebar">
-                <div class="search">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search" />
-                        <button class="search-button" type="submit">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
+            <div class="orangebar"></div>
         </header>
         <main>
             <div class="bg">
@@ -80,7 +75,17 @@
                     </div>
                 </div>
             </div>
+            <div class="overlay-container">
+                <div class="close-button">
+                    <button>X</button>
+                </div>
+                <ul class="cart-products">
+                    <li>Your Cart</li>
+                    <li>Your cart is empty!</li>
+                </ul>
+            </div>
         </main>
         <footer id="footer"><i class="fa fa-copyright" aria-hidden="false"></i>Copyright Rainydays 2020</footer>
+        <script src="js/overlay.js"></script>
     </body>
 </html>
