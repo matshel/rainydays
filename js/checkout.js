@@ -62,6 +62,7 @@ function validateForm(event) {
     }
 
     if (validateName(fullName.value) === true && validateEmail(email.value) === true && checkLength(address.value, 25) && checkLength(ccnumber.value, 10) === true && validateName(cardholder.value) === true && checkLength(date.value, 4) && checkLength(cvccode.value, 3)) {
+        validateForm();
 }
 }
 
