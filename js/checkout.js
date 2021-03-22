@@ -49,20 +49,20 @@ function validateForm(event) {
         cardholderError.style.display = "block"; 
     }
 
-    if (checkLength(date.value, 4) === true) {
+    if (checkLengthEqual(date.value, 4) === true) {
         dateError.style.display = "none";
     } else {
         dateError.style.display = "block";
     }
 
-    if (checkLength(cvccode.value, 3) === true) {
+    if (checkLengthEqual(cvccode.value, 3) === true) {
         cvcCodeError.style.display = "none";
     } else {
         cvcCodeError.style.display = "block";
     }
 
-    if (validateName(fullName.value) === true && validateEmail(email.value) === true && checkLength(address.value, 25) && checkLength(ccnumber.value, 10) === true && validateName(cardholder.value) === true && checkLength(date.value, 4) && checkLength(cvccode.value, 3)) {
-        validateForm();
+    if (validateName(fullName.value) === true && validateEmail(email.value) === true && checkLength(address.value, 25) && checkLength(ccnumber.value, 10) === true && validateName(cardholder.value) === true && checkLengthEqual(date.value, 4) && checkLengthEqual(cvccode.value, 3)) {
+        goTo();
 }
 }
 
@@ -72,6 +72,13 @@ form.addEventListener("submit", validateForm);
 
 function checkLength(value, len) { 
     if (value.trim().length > len) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function checkLengthEqual(value, len) { 
+    if (value.trim().length === len) {
         return true;
     } else {
         return false;
@@ -91,8 +98,7 @@ function validateName(fullName) {
     return patternMatches;
 }
 
-const purchaseButtonCheckout = document.querySelector("#checkoutForm button");
 
-purchaseButtonCheckout.addEventListener("click" , () => {
+function goTo() {
     location.href = "checkout-success.html";
-});
+}
